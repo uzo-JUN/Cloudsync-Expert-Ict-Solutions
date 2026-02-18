@@ -24,14 +24,14 @@ const Team = () => {
     },
     {
       id: 2,
-      name: "Lorem Ipsum",
-      position: "HR",
+      name: "Augustina A ",
+      position: "Chief of staff",
       src: "/src/assets/sirkosi.png"
     },
     {
       id: 3,
-      name: "Lorem Ipsum",
-      position: "Lead Developer",
+      name: " Andy A",
+      position: "HR",
       src: "/src/assets/sirkosi.png"
     },
     {

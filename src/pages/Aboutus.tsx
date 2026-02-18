@@ -3,7 +3,8 @@ import { ArrowRight, Award, Users, Globe, Code, Cloud, Shield, Cpu, Star, Lightb
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useState, useEffect } from "react";
-import officeImage from "@/assets/office.jpg"; // Import the image from src/assets
+import officeImage from "@/assets/office.jpg";
+import hillshapeImage from "@/assets/hillshape.png"; // Import the hillshape image
 
 const About = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -270,7 +271,7 @@ const About = () => {
               <p className="text-sm uppercase tracking-wider text-gray-600">Clients Projects</p>
             </motion.div>
 
-            {/* Stat 4 - $10.5M+ */}
+            {/* Stat 4 - Updated monthly income range */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -282,7 +283,7 @@ const About = () => {
               }}
               className="bg-white border border-gray-200 rounded-xl p-8 text-center hover:border-primary/50 transition-all duration-300 cursor-pointer"
             >
-              <p className="text-5xl md:text-6xl font-bold text-gray-900 mb-2">$10.5M+</p>
+              <p className="text-5xl md:text-6xl font-bold text-gray-900 mb-2">$1.5M-$2M</p>
               <p className="text-sm uppercase tracking-wider text-gray-600">Monthly Revenue</p>
             </motion.div>
           </div>
@@ -393,6 +394,97 @@ const About = () => {
                   From discovery and strategy to deployment and support.
                 </p>
               </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* NEW SECTION: Hillshape Background with Promotional Content */}
+      <section className="relative py-32 overflow-hidden">
+        {/* Hillshape Background Image */}
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${hillshapeImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          {/* Dark overlay for better text visibility */}
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4">
+          {/* Top aligned content with space above */}
+          <div className="pt-8">
+            {/* Up to 10% off button - non-clickable div instead of button */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex justify-center mb-16"
+            >
+              <div className="bg-green-800 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg">Up to 
+                <span className="text-yellow-300"> 10% </span>off
+              </div>
+            </motion.div>
+
+            {/* Main heading - Trusted ICT Experts */}
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-4xl md:text-6xl font-bold text-white text-center mb-8 leading-tight"
+            >
+              Trusted ICT Experts for
+              <br />
+              Digital Solutions
+            </motion.h2>
+
+            {/* Get Started button with white thick borders */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="flex justify-center mb-16"
+            >
+              <button className="bg-transparent border-4 border-white text-white font-bold py-4 px-12 rounded-full text-xl hover:bg-white hover:text-black transition-all duration-300">
+                Get Started
+              </button>
+            </motion.div>
+
+            {/* First row of floating divs - non-clickable, multiple colors, white text */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="flex flex-wrap justify-center gap-4 mb-6"
+            >
+              <div className="bg-blue-600 text-white font-medium py-3 px-6 rounded-full shadow-md">Cloud Computing</div>
+              <div className="bg-green-600 text-white font-medium py-3 px-6 rounded-full shadow-md">Cybersecurity</div>
+              <div className="bg-yellow-600 text-white font-medium py-3 px-6 rounded-full shadow-md">Data Analytics</div>
+              <div className="bg-purple-600 text-white font-medium py-3 px-6 rounded-full shadow-md">AI & ML</div>
+              <div className="bg-pink-600 text-white font-medium py-3 px-6 rounded-full shadow-md">DevOps</div>
+              <div className="bg-indigo-600 text-white font-medium py-3 px-6 rounded-full shadow-md">Software Dev</div>
+            </motion.div>
+
+            {/* Second row of floating divs - non-clickable, multiple colors, white text */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="flex flex-wrap justify-center gap-4"
+            >
+              <div className="bg-orange-600 text-white font-medium py-3 px-6 rounded-full shadow-md">IT Consulting</div>
+              <div className="bg-teal-600 text-white font-medium py-3 px-6 rounded-full shadow-md">Cloud Migration</div>
+              <div className="bg-red-600 text-white font-medium py-3 px-6 rounded-full shadow-md">Tech Support</div>
+              <div className="bg-cyan-600 text-white font-medium py-3 px-6 rounded-full shadow-md">Digital Transformation</div>
             </motion.div>
           </div>
         </div>
