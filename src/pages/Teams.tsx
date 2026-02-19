@@ -128,30 +128,6 @@ const Team = () => {
                 }}
                 className="bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-primary/30 transition-all duration-300 flex flex-col h-full"
               >
-                {/* Member Image */}
-                <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200">
-                  <img 
-                    src={member.src} 
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      // Fallback if image fails to load
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      const parent = target.parentElement;
-                      if (parent) {
-                        parent.innerHTML = `
-                          <div class="w-full h-full flex items-center justify-center">
-                            <div class="w-20 h-20 rounded-full bg-gray-300 flex items-center justify-center">
-                              <span class="text-gray-600 text-2xl font-light">${String.fromCharCode(65 + (index % 26))}</span>
-                            </div>
-                          </div>
-                        `;
-                      }
-                    }}
-                  />
-                </div>
-                
                 {/* Member Info with Bio */}
                 <div className="p-6 flex-1 flex flex-col">
                   <h3 className="text-xl font-bold text-gray-900 mb-1">
