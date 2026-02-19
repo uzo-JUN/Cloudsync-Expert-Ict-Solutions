@@ -20,7 +20,7 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-4 font-sans">The Company</h4>
             <ul className="space-y-2 text-sm opacity-70">
-              {["About Us", "Our Team", "Partners", "Career", "Blog"].map((l) => (
+              {["Home","About Us", "Our Team", "Partners", "Career", "Blog"].map((l) => (
                 <li key={l}><button className="hover:opacity-100 transition-opacity">{l}</button></li>
               ))}
             </ul>
@@ -38,10 +38,9 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-4 font-sans">Contact</h4>
             <ul className="space-y-2 text-sm opacity-70">
-              <li>123 Innovation Drive</li>
-              <li>Tech City, TC 12345</li>
+              <li>55 Main Street, 2nd block Malborne, Australia</li>
               <li>info@cloudsync.com</li>
-              <li>+1 (555) 123-4567</li>
+              <li>+880 (123) 456 88</li>
             </ul>
           </div>
         </div>
