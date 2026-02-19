@@ -14,99 +14,57 @@ const Team = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Team members data with names, positions, and image paths from src/assets/
+  // Team members data with names, positions, bios, and image paths
   const teamMembers = [
     {
       id: 1,
-      name: "Lorem Ipsum",
-      position: "CEO & Founder",
-      src: "/src/assets/sirkosi.png"
+      name: "ANDY A",
+      position: "Chief of Staff",
+      bio: "Andy A. is a seasoned technology leader with years of experience architecting scalable systems and leading engineering teams. As CTO, he drives the company's technical vision, infrastructure strategy, and innovation roadmap.",
+      src: "/src/assets/team-collab.png"
     },
     {
       id: 2,
-      name: "Augustina A ",
-      position: "Chief of staff",
-      src: "/src/assets/sirkosi.png"
+      name: "Augustina A",
+      position: "HR", 
+      bio: "Augustina A. brings years of HR leadership and strategic operations experience to her role as Chief of Staff. She oversees talent acquisition, employee engagement, and organizational development across the company.",
+      src: "/src/assets/why-choose-team.png"
     },
     {
       id: 3,
-      name: " Andy A",
-      position: "HR",
+      name: "Kosi Emmanuel Chukwujindu",
+      position: "Head of Product",
+      bio: "Kosi Emmanuel Chukwujindu is a product management professional with years of experience building and scaling digital products. As Head of Product, he leads product strategy, user research, and roadmap execution.",
       src: "/src/assets/sirkosi.png"
     },
     {
       id: 4,
-      name: "Lorem Ipsum",
-      position: "UX Designer",
+      name: "Kelechi Uroko",
+      position: "Software Engineer",
+      bio: "Kelechi Uroko is a full-stack software engineer with expertise in modern web technologies and cloud infrastructure. Based in the UK, he builds scalable, high-performance applications that solve complex business problems",
       src: "/src/assets/sirkosi.png"
     },
     {
       id: 5,
-      name: "Lorem Ipsum",
-      position: "Project Manager",
-      src: "/src/assets/sirkosi.png"
+      name: "Neha Bansal",
+      position: "Research Director",
+      bio: "Neha Bansal leads research and development initiatives as Research Director, driving innovation in emerging technologies. With a strong background in data science and market analysis and identifying trends that shape product strategy",
+       src: "/src/assets/sirkosi.png"
     },
     {
       id: 6,
-      name: "Lorem Ipsum",
-      position: "Frontend Developer",
+      name: " Modesta Uzo ",
+      position: " Client Happiness Manager",
+      bio: "Modesta Uzo is dedicated to ensuring exceptional customer experiences as Client Happiness Manager. With years of client relations experience, she handles inquiries, resolves issues, and builds lasting relationships with customers.",
       src: "/src/assets/sirkosi.png"
     },
     {
       id: 7,
-      name: "Lorem Ipsum",
-      position: "Backend Developer",
+      name: "Chiamaka Eze",
+      position: " QA Manager",
+      bio: "Chiamaka Eze ensures product excellence as QA Manager, leading testing strategies and quality assurance processes. she oversees manual and automated testing to deliver bug-free, high-performing software.",
       src: "/src/assets/sirkosi.png"
-    },
-    {
-      id: 8,
-      name: "Lorem Ipsum",
-      position: "DevOps Engineer",
-      src: "/src/assets/sirkosi.png"
-    },
-    {
-      id: 9,
-      name: "Lorem Ipsum",
-      position: "Marketing Lead",
-      src: "/src/assets/sirkosi.png"
-    },
-    {
-      id: 10,
-      name: "Lorem Ipsum",
-      position: "Sales Director",
-      src: "/src/assets/sirkosi.png"
-    },
-    {
-      id: 11,
-      name: "Lorem Ipsum",
-      position: "Customer Success",
-      src: "/src/assets/sirkosi.png"
-    },
-    {
-      id: 12,
-      name: "Lorem Ipsum",
-      position: "HR Manager",
-      src: "/src/assets/sirkosi.png"
-    },
-    {
-      id: 13,
-      name: "Lorem Ipsum",
-      position: "QA Specialist",
-      src: "/src/assets/sirkosi.png"
-    },
-    {
-      id: 14,
-      name: "Lorem Ipsum",
-      position: "Content Writer",
-      src: "/src/assets/sirkosi.png"
-    },
-    {
-      id: 15,
-      name: "Lorem Ipsum",
-      position: "UI Designer",
-      src: "/src/assets/sirkosi.png"
-    }
-  ];
+    }];
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
@@ -117,7 +75,7 @@ const Team = () => {
         <Navbar />
       </div>
 
-      {/* Hero Section - Increased top padding for more space */}
+      {/* Hero Section */}
       <section className="relative pt-32 pb-12 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <motion.h1
@@ -155,7 +113,7 @@ const Team = () => {
             </p>
           </motion.div>
 
-          {/* Team Members Grid - 4 per row, 15 members total */}
+          {/* Team Members Grid - 4 per row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <motion.div
@@ -168,7 +126,7 @@ const Team = () => {
                   y: -10,
                   boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
                 }}
-                className="bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-primary/30 transition-all duration-300"
+                className="bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-primary/30 transition-all duration-300 flex flex-col h-full"
               >
                 {/* Member Image */}
                 <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200">
@@ -194,13 +152,16 @@ const Team = () => {
                   />
                 </div>
                 
-                {/* Member Info */}
-                <div className="p-6 text-center">
+                {/* Member Info with Bio */}
+                <div className="p-6 flex-1 flex flex-col">
                   <h3 className="text-xl font-bold text-gray-900 mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm font-medium text-primary mb-3">
                     {member.position}
+                  </p>
+                  <p className="text-sm text-gray-600 italic border-t border-gray-100 pt-3 mt-auto">
+                    "{member.bio}"
                   </p>
                 </div>
               </motion.div>
