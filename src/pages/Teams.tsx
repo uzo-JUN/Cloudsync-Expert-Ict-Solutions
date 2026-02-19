@@ -18,52 +18,52 @@ const Team = () => {
   const teamMembers = [
     {
       id: 1,
-      name: "ANDY A",
+      name: "Nonso A ",
       position: "Chief of Staff",
       bio: "Andy A. is a seasoned technology leader with years of experience architecting scalable systems and leading engineering teams. As CTO, he drives the company's technical vision, infrastructure strategy, and innovation roadmap.",
-      src: "/src/assets/team-collab.png"
+      src: "/src/assets/teazm-collab.png"
     },
     {
       id: 2,
       name: "Augustina A",
       position: "HR", 
       bio: "Augustina A. brings years of HR leadership and strategic operations experience to her role as Chief of Staff. She oversees talent acquisition, employee engagement, and organizational development across the company.",
-      src: "/src/assets/why-choose-team.png"
+      src: "/src/assets/why-chzoose-team.png"
     },
     {
       id: 3,
-      name: "Kosi Emmanuel Chukwujindu",
+      name: "Emmanuel C.",
       position: "Head of Product",
       bio: "Kosi Emmanuel Chukwujindu is a product management professional with years of experience building and scaling digital products. As Head of Product, he leads product strategy, user research, and roadmap execution.",
-      src: "/src/assets/sirkosi.png"
+      src: "/src/assets/sirkozsi.png"
     },
     {
       id: 4,
-      name: "Kelechi Uroko",
+      name: "Kelly U.",
       position: "Software Engineer",
       bio: "Kelechi Uroko is a full-stack software engineer with expertise in modern web technologies and cloud infrastructure. Based in the UK, he builds scalable, high-performance applications that solve complex business problems",
-      src: "/src/assets/sirkosi.png"
+      src: "/src/assets/sirskosi.png"
     },
     {
       id: 5,
       name: "Neha Bansal",
       position: "Research Director",
       bio: "Neha Bansal leads research and development initiatives as Research Director, driving innovation in emerging technologies. With a strong background in data science and market analysis and identifying trends that shape product strategy",
-       src: "/src/assets/sirkosi.png"
+       src: "/src/assets/sirskosi.png"
     },
     {
       id: 6,
-      name: " Modesta Uzo ",
+      name: " Modesta U. ",
       position: " Client Happiness Manager",
       bio: "Modesta Uzo is dedicated to ensuring exceptional customer experiences as Client Happiness Manager. With years of client relations experience, she handles inquiries, resolves issues, and builds lasting relationships with customers.",
-      src: "/src/assets/sirkosi.png"
+      src: "/src/assets/sisrkosi.png"
     },
     {
       id: 7,
-      name: "Chiamaka Eze",
+      name: " Judith E.",
       position: " QA Manager",
       bio: "Chiamaka Eze ensures product excellence as QA Manager, leading testing strategies and quality assurance processes. she oversees manual and automated testing to deliver bug-free, high-performing software.",
-      src: "/src/assets/sirkosi.png"
+      src: "/src/assets/sirkossi.png"
     }];
 
   return (

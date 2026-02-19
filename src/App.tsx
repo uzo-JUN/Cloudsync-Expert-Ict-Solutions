@@ -8,7 +8,7 @@ import Aboutus from "./pages/Aboutus";
 import Teams from "./pages/Teams";
 // import Faq from "./pages/Faq";
 // import Services from './pages/Services';
-// import Contact from './pages/Contact';
+import Contact from './pages/Contact';
 import Blog from './pages/Blog'
 import NotFound from "./pages/NotFound";
 
@@ -25,8 +25,8 @@ const App = () => (
           <Route path="/aboutus" element={<Aboutus />} />
           <Route path="/teams" element={<Teams />} />
           {/*<Route path="/faq" element={<Faq />} />
-          <Route path="/services" element={<Services />} /> 
-          <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/services" element={<Services />} /> */}
+          <Route path="/contact" element={<Contact />} /> 
           <Route path="/blog" element={<Blog />} />  
           <Route path="*" element={<NotFound />} />
         </Routes>
