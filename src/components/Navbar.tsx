@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import cloudLogo from "@/assets/cloud.png"; // Import the logo
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -37,8 +38,8 @@ const Navbar = () => {
       <div className="container flex items-center justify-between h-20 px-4 md:px-6">
         <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
           <img 
-            src="/src/assets/Cloud.png"
-            alt="CloudSync" 
+            src={cloudLogo}
+            alt="cloudSync" 
             className="w-10 h-10 object-contain"
           />
         </Link>
@@ -57,7 +58,7 @@ const Navbar = () => {
             Home
           </Link>
           
-          {/* About with hover dropdown - Second (after Home) */}
+          {/* About with hover dropdown */}
           <div className="relative group">
             <button
               className={`flex items-center gap-1 text-base font-medium transition-all duration-300 group-hover:-translate-y-0.5 ${
@@ -72,7 +73,6 @@ const Navbar = () => {
               }`} />
             </button>
             
-            {/* Dropdown menu - appears on hover */}
             <div className="absolute top-full left-0 mt-2 w-40 bg-white rounded-md shadow-lg py-2 border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               {aboutDropdownItems.map((item) => (
                 <Link
@@ -90,7 +90,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Services, Blog, Contact - Third, Fourth, Fifth */}
+          {/* Services, Career, Contact */}
           {navLinks.slice(1).map((link) => (
             <Link
               key={link.name}
@@ -120,11 +120,11 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation Menu - Organized */}
+      {/* Mobile Navigation Menu */}
       {open && (
         <div className="md:hidden bg-white border-t border-gray-200 py-6 px-4 shadow-lg">
           <div className="space-y-3">
-            {/* Home in mobile menu */}
+            {/* Home */}
             <Link
               to="/"
               onClick={() => setOpen(false)}
@@ -137,7 +137,7 @@ const Navbar = () => {
               Home
             </Link>
             
-            {/* About with expandable dropdown in mobile */}
+            {/* About with expandable dropdown */}
             <div className="border-b border-gray-100 pb-2">
               <button
                 onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
@@ -156,7 +156,6 @@ const Navbar = () => {
                 />
               </button>
               
-              {/* Mobile dropdown - expands when clicked */}
               <div className={`overflow-hidden transition-all duration-300 ${
                 mobileAboutOpen ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'
               }`}>
@@ -182,7 +181,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* Services, Blog, Contact in mobile menu */}
+            {/* Services, Career, Contact */}
             {navLinks.slice(1).map((link) => (
               <Link
                 key={link.name}
@@ -198,7 +197,7 @@ const Navbar = () => {
               </Link>
             ))}
             
-            {/* Consult button in mobile menu */}
+            {/* Consult button */}
             <div className="pt-4 mt-2 border-t border-gray-200">
               <Link to="/consult" onClick={() => setOpen(false)}>
                 <Button className="w-full bg-black text-white rounded-full py-6 text-base transition-all duration-500 hover:bg-[#4B6BFB]">
