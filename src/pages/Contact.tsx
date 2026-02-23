@@ -2,27 +2,43 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import getintouchbgc from "@/assets/getintouch.jpg"; // Import the background image
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       
-      {/* First Section - Medium Grey Background with Bold Text */}
-      <section className="bg-gray-100 dark:bg-gray-800 py-32 md:py-40">
-        <div className="container mx-auto px-4 text-center">
+      {/* First Section - With Background Image */}
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${getintouchbgc})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          {/* Dark overlay for better text visibility */}
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             {/* "GET IN TOUCH" - Big Bold Text */}
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight text-gray-900 dark:text-white mb-6">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight text-white mb-6">
               GET IN TOUCH
             </h1>
             
             {/* Optional subtitle */}
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 max-w-2xl mx-auto">
               We'd love to hear from you. Send us a message and we'll respond as soon as possible.
             </p>
           </motion.div>
@@ -42,37 +58,58 @@ const Contact = () => {
             {/* Address Box - Dark Blue Theme */}
             <div className="bg-blue-900/10 dark:bg-blue-950/40 p-8 rounded-2xl text-center hover:shadow-xl transition-all border border-blue-200 dark:border-blue-800/50 backdrop-blur-sm">
               <div className="inline-flex p-4 bg-blue-500/20 dark:bg-blue-500/30 rounded-full mb-6">
-                <MapPin className="w-8 h-8 text-black-600 dark:text-blue-400" />
+                <MapPin className="w-8 h-8 text-blue-600 dark:text-blue-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-black-800">Visit Us</h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                55 Main Street, 2nd block<br />
-                Melbourne, Australia
-              </p>
+              <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-200">Visit Us</h3>
+              <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-3">
+                <div>
+                  <p className="font-semibold text-sm text-blue-600 dark:text-blue-400 mb-1">NIGERIA</p>
+                  <p>Suite 1G, East-wing, Groundfloor,</p>
+                  <p>Purity Business Mall, Abakaliki Road,</p>
+                  <p>Enugu, Nigeria. 400211</p>
+                </div>
+                <div className="border-t border-blue-200 dark:border-blue-800/50 pt-3">
+                  <p className="font-semibold text-sm text-blue-600 dark:text-blue-400 mb-1">USA</p>
+                  <p>15500 Voss Rd, Ste 425,</p>
+                  <p>Sugar Land, TX 77498</p>
+                </div>
+              </div>
             </div>
 
             {/* Phone Box - Dark Green Theme */}
             <div className="bg-green-900/10 dark:bg-green-950/40 p-8 rounded-2xl text-center hover:shadow-xl transition-all border border-green-200 dark:border-green-800/50 backdrop-blur-sm">
               <div className="inline-flex p-4 bg-green-500/20 dark:bg-green-500/30 rounded-full mb-6">
-                <Phone className="w-8 h-8 text-black-600 dark:text-green-400" />
+                <Phone className="w-8 h-8 text-green-600 dark:text-green-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-black-800 ">Call Us</h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                +880 (123) 456 88<br />
-                Mon-Fri, 9am-6pm
-              </p>
+              <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-200">Call Us</h3>
+              <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-3">
+                <div>
+                  <p className="font-semibold text-sm text-green-600 dark:text-green-400 mb-1">NIGERIA</p>
+                  <p className="text-lg font-medium">+234 814 168 1189</p>
+                </div>
+                <div className="border-t border-green-200 dark:border-green-800/50 pt-3">
+                  <p className="font-semibold text-sm text-green-600 dark:text-green-400 mb-1">USA</p>
+                  <p className="text-lg font-medium">+1 (214) 462-2824</p>
+                </div>
+              </div>
             </div>
 
             {/* Email Box - Dark Purple Theme */}
             <div className="bg-purple-900/10 dark:bg-purple-950/40 p-8 rounded-2xl text-center hover:shadow-xl transition-all border border-purple-200 dark:border-purple-800/50 backdrop-blur-sm">
               <div className="inline-flex p-4 bg-purple-500/20 dark:bg-purple-500/30 rounded-full mb-6">
-                <Mail className="w-8 h-8 text-black-600 dark:text-purple-400" />
+                <Mail className="w-8 h-8 text-purple-600 dark:text-purple-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-black-800 dark:text-purple-300">Email Us</h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                support@cloudsyncc.com<br />
-                info@cloudsyncc.com
-              </p>
+              <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-200">Email Us</h3>
+              <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-3">
+                <div>
+                  <p className="font-semibold text-sm text-purple-600 dark:text-purple-400 mb-1">GENERAL INQUIRIES</p>
+                  <p className="text-base">support@cloudsyncc.com</p>
+                </div>
+                <div className="border-t border-purple-200 dark:border-purple-800/50 pt-3">
+                  <p className="font-semibold text-sm text-purple-600 dark:text-purple-400 mb-1">SUPPORT</p>
+                  <p className="text-base">info@cloudsyncc.com</p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -97,11 +134,20 @@ const Contact = () => {
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-1">Office Address</h3>
-                  <p className="text-muted-foreground">
-                    55 Main Street, 2nd block<br/>
-                    Melbourne, Australia
-                  </p>
+                  <h3 className="font-semibold text-lg mb-2">Office Address</h3>
+                  <div className="space-y-3 text-muted-foreground">
+                    <div>
+                      <p className="font-medium text-primary">Nigeria Office</p>
+                      <p>Suite 1G, East-wing, Groundfloor,</p>
+                      <p>Purity Business Mall, Abakaliki Road,</p>
+                      <p>Enugu, Nigeria. 400211</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-primary">USA Office</p>
+                      <p>15500 Voss Rd, Ste 425,</p>
+                      <p>Sugar Land, TX 77498</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -111,11 +157,17 @@ const Contact = () => {
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-1">Email Us</h3>
-                  <p className="text-muted-foreground">
-                    info@cloudsyncc.com<br />
-                    support@cloudsyncc.com
-                  </p>
+                  <h3 className="font-semibold text-lg mb-2">Email Us</h3>
+                  <div className="space-y-2 text-muted-foreground">
+                    <div>
+                      <p className="font-medium text-primary">General Inquiries</p>
+                      <p>info@cloudsyncc.com</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-primary">Support</p>
+                      <p>support@cloudsyncc.com</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -125,11 +177,17 @@ const Contact = () => {
                   <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-1">Phone</h3>
-                  <p className="text-muted-foreground">
-                    +880 (123) 456 88<br />
-                    +880 (123) 456 89
-                  </p>
+                  <h3 className="font-semibold text-lg mb-2">Phone</h3>
+                  <div className="space-y-2 text-muted-foreground">
+                    <div>
+                      <p className="font-medium text-primary">Nigeria</p>
+                      <p>+234 814 168 1189</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-primary">USA</p>
+                      <p>+1 (214) 462-2824</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>

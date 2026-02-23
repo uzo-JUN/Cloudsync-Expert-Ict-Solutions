@@ -31,7 +31,7 @@ const AboutSection = () => {
                 <p className="text-sm mt-1 opacity-80">Revenue Growth</p>
               </div>
               <div className="bg-primary text-primary-foreground rounded-2xl p-6 text-center">
-                <p className="text-3xl font-bold">99.8%</p>
+                <p className="text-3xl font-bold">99.9%</p>
                 <p className="text-sm mt-1 opacity-80">Client Satisfaction</p>
               </div>
             </div>

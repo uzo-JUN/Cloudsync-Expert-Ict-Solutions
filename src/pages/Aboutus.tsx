@@ -20,17 +20,16 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Sticky Navbar */}
-      <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
-      }`}>
+      <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+        }`}>
         <Navbar />
       </div>
-      
+
       {/* Hero Section - Cloudsync Style */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-4">
         {/* Background gradient */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(185_85%_50%/0.15),transparent_70%)]" />
-        
+
         {/* Center Content - Mobile responsive */}
         <div className="relative z-20 text-center max-w-5xl mx-auto px-4">
           <motion.div
@@ -97,12 +96,12 @@ const About = () => {
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-primary/30 rounded-full"
-              initial={{ 
+              initial={{
                 x: Math.random() * 100 + "%",
                 y: Math.random() * 100 + "%",
-                opacity: 0 
+                opacity: 0
               }}
-              animate={{ 
+              animate={{
                 y: ["0%", "-30%", "30%", "0%"],
                 opacity: [0.2, 0.5, 0.2],
               }}
@@ -138,12 +137,12 @@ const About = () => {
                 >
                   About Cloudsync
                 </motion.button>
-                
+
                 <p className="text-muted-foreground text-base sm:text-lg">
-                  Cloudsync is a premier ICT solutions provider specializing in software development, 
-                  web services, and comprehensive IT support. We combine technical expertise with 
-                  innovative thinking to deliver solutions that drive business growth and digital 
-                  transformation. Our team of dedicated professionals works tirelessly to ensure 
+                  Cloudsync is a premier ICT solutions provider specializing in software development,
+                  web services, and comprehensive IT support. We combine technical expertise with
+                  innovative thinking to deliver solutions that drive business growth and digital
+                  transformation. Our team of dedicated professionals works tirelessly to ensure
                   your technology infrastructure is robust, secure, and scalable for future challenges.
                 </p>
               </motion.div>
@@ -159,12 +158,15 @@ const About = () => {
                 <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
                   Who We Are
                 </h2>
-                
+
                 <p className="text-muted-foreground text-base sm:text-lg">
-                  We are a team of passionate technologists, creative problem-solvers, and strategic 
-                  thinkers dedicated to helping businesses thrive in the digital age through innovative 
-                  ICT solutions. Our diverse backgrounds and shared commitment to excellence drive 
-                  us to deliver exceptional results for our clients.
+                  CloudSync is a global tech solutions provider, uniting IT
+                  experts to deliver smart, scalable, and secure cloud-based
+                  systems. We develop and manage digital infrastructure for
+                  businesses of all sizes helping them solve real-world
+                  challenges through innovative technology. At CloudSync, we
+                  build future-ready IT frameworks that drive growth and
+                  simplify complexity
                 </p>
               </motion.div>
 
@@ -179,27 +181,29 @@ const About = () => {
                 <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
                   Our Mission
                 </h2>
-                
+
                 <p className="text-muted-foreground text-base sm:text-lg">
-                  To empower businesses with cutting-edge technology solutions that drive efficiency, 
-                  foster innovation, and create sustainable growth in an increasingly digital world. 
-                  We strive to be the trusted partner that helps our clients navigate the complexities 
-                  of modern technology with confidence.
+                  To empower businesses and
+                  communities through innovative,
+                  scalable, and secure technology
+                  solutions that simplify everyday
+                  challenges and drive digital
+                  transformation.
                 </p>
               </motion.div>
             </div>
 
             {/* Right side - Image */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="lg:w-1/2"
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl sticky top-24 border border-gray-300">
-                <img 
-                  src={officeImage} 
-                  alt="Cloudsync Office" 
+                <img
+                  src={officeImage}
+                  alt="Cloudsync Office"
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -229,7 +233,7 @@ const About = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
                 boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
               }}
@@ -244,8 +248,8 @@ const About = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{  }}
-              whileHover={{ 
+              transition={{ delay: 0.1 }}
+              whileHover={{
                 scale: 1.05,
                 boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
               }}
@@ -261,7 +265,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
                 boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
               }}
@@ -271,19 +275,19 @@ const About = () => {
               <p className="text-sm uppercase tracking-wider text-gray-600">Clients Projects</p>
             </motion.div>
 
-            {/* Stat 4 - Updated monthly income range */}
+            {/* Stat 4 - Monthly Revenue Range - Fixed to match others */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
                 boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
               }}
               className="bg-white border border-gray-200 rounded-xl p-8 text-center hover:border-primary/50 transition-all duration-300 cursor-pointer"
             >
-              <p className="text-5xl md:text-6xl font-bold text-gray-900 mb-2">$1.5M-$2M</p>
+              <p className="text-4xl md:text-5xl font-bold text-gray-900 mb-2 leading-tight">$1.5M-<br className="hidden sm:block" />$2M</p>
               <p className="text-sm uppercase tracking-wider text-gray-600">Monthly Revenue</p>
             </motion.div>
           </div>
@@ -296,7 +300,7 @@ const About = () => {
           {/* Top row with heading and description */}
           <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
             {/* Left side - What Sets Us Apart heading */}
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -306,7 +310,7 @@ const About = () => {
             </motion.h2>
 
             {/* Right side - Description text with vertical line */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -402,7 +406,7 @@ const About = () => {
       {/* NEW SECTION: Hillshape Background with Promotional Content */}
       <section className="relative py-32 overflow-hidden">
         {/* Hillshape Background Image */}
-        <div 
+        <div
           className="absolute inset-0 z-0"
           style={{
             backgroundImage: `url(${hillshapeImage})`,
@@ -426,7 +430,7 @@ const About = () => {
               viewport={{ once: true }}
               className="flex justify-center mb-16"
             >
-              <div className="bg-green-800 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg">Up to 
+              <div className="bg-green-800 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg">Up to
                 <span className="text-yellow-300"> 10% </span>off
               </div>
             </motion.div>

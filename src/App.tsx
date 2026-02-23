@@ -6,10 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Aboutus from "./pages/Aboutus";
 import Teams from "./pages/Teams";
-// import Faq from "./pages/Faq";
+import Faq from "./pages/Faq";
 import Services from './pages/Services';
 import Contact from './pages/Contact';
-import Blog from './pages/Blog'
+import Career from './pages/Career'
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,10 +24,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/aboutus" element={<Aboutus />} />
           <Route path="/teams" element={<Teams />} />
-          {/*<Route path="/faq" element={<Faq />} />*/}
+          <Route path="/faq" element={<Faq />} />
           <Route path="/services" element={<Services />} />  
           <Route path="/contact" element={<Contact />} /> 
-          <Route path="/blog" element={<Blog />} />  
+          <Route path="/career" element={<Career />} />  
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
