@@ -4,7 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useState, useEffect } from "react";
 import officeImage from "@/assets/office.jpg";
-import hillshapeImage from "@/assets/hillshape.png"; // Import the hillshape image
+import hillshapeImage from "@/assets/hillshape.png";
+import workBgc from "@/assets/work.png"; // Import the work background image
 
 const About = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -25,17 +26,29 @@ const About = () => {
         <Navbar />
       </div>
 
-      {/* Hero Section - Cloudsync Style */}
+      {/* Hero Section - With Background Image */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-4">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(185_85%_50%/0.15),transparent_70%)]" />
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${workBgc})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          {/* Dark overlay for better text visibility */}
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
 
-        {/* Center Content - Mobile responsive */}
+        {/* Content */}
         <div className="relative z-20 text-center max-w-5xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="flex flex-col items-center justify-center min-h-[calc(100vh-200px)] md:min-h-[calc(100vh-300px)]"
           >
             {/* Main Heading - Responsive text sizes */}
             <motion.h1
@@ -44,13 +57,13 @@ const About = () => {
               transition={{ delay: 0.3 }}
               className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6"
             >
-              <span className="block text-2xl sm:text-4xl md:text-5xl text-primary mb-2 sm:mb-4">
+              <span className="block text-6xl sm:text-4xl md:text-8xl text-white mb-2 sm:mb-4">
                 CLOUDSYNC
               </span>
-              <span className="gradient-text block text-4xl sm:text-6xl md:text-8xl leading-tight">
+              <span className="gradient-text block text-4xl sm:text-6xl md:text-5xl leading-tight text-white">
                 DRIVING INNOVATION
               </span>
-              <span className="gradient-text block text-4xl sm:text-6xl md:text-8xl leading-tight">
+              <span className="gradient-text block text-4xl sm:text-6xl md:text-5xl leading-tight text-white">
                 DELIVERING RESULTS
               </span>
             </motion.h1>
@@ -60,62 +73,45 @@ const About = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="text-base sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto px-2"
+              className="text-base sm:text-xl md:text-2xl text-white/90 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto px-2"
             >
               We are here to Empower Your Digital Future
             </motion.p>
 
-            {/* Centered Button */}
+            {/* Centered Button - Added more bottom margin for laptop */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
+              className="mb-16 md:mb-24 lg:mb-32" // Added extra bottom margin for laptop screens
             >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-                className="group relative px-6 sm:px-10 py-3 sm:py-5 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground rounded-full font-semibold text-sm sm:text-lg shadow-2xl hover:shadow-primary/25 transition-all duration-300 overflow-hidden"
+              <a 
+                href="https://forms.office.com/r/r6LdLyPvCW" 
+                target="_blank" 
+                rel="noopener noreferrer"
               >
-                <span className="relative z-10 flex items-center gap-2">
-                  Get Started Today
-                </span>
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary"
-                  initial={{ x: "100%" }}
-                  whileHover={{ x: 0 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="group relative px-6 sm:px-10 py-3 sm:py-5 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground rounded-full font-semibold text-sm sm:text-lg shadow-2xl hover:shadow-primary/25 transition-all duration-300 overflow-hidden"
+                >
+                  <span className="relative z-10 flex items-center gap-2">
+                    Get Started Today
+                  </span>
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary"
+                    initial={{ x: "100%" }}
+                    whileHover={{ x: 0 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </motion.button>
+              </a>
             </motion.div>
           </motion.div>
         </div>
-
-        {/* Floating particles effect - reduced for mobile */}
-        <div className="hidden sm:block">
-          {[...Array(12)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-primary/30 rounded-full"
-              initial={{
-                x: Math.random() * 100 + "%",
-                y: Math.random() * 100 + "%",
-                opacity: 0
-              }}
-              animate={{
-                y: ["0%", "-30%", "30%", "0%"],
-                opacity: [0.2, 0.5, 0.2],
-              }}
-              transition={{
-                duration: 5 + Math.random() * 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: Math.random() * 2,
-              }}
-            />
-          ))}
-        </div>
       </section>
 
+      {/* Rest of the component remains exactly the same... */}
       {/* Section: About, Who We Are, Our Mission stacked with image on side */}
       <section className="py-16 sm:py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -275,7 +271,7 @@ const About = () => {
               <p className="text-sm uppercase tracking-wider text-gray-600">Clients Projects</p>
             </motion.div>
 
-            {/* Stat 4 - Monthly Revenue Range - Fixed to match others */}
+            {/* Stat 4 - Monthly Revenue Range */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -423,7 +419,7 @@ const About = () => {
         <div className="relative z-10 container mx-auto px-4">
           {/* Top aligned content with space above */}
           <div className="pt-8">
-            {/* Up to 10% off button - non-clickable div instead of button */}
+            {/* Up to 10% off button */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -448,7 +444,7 @@ const About = () => {
               Digital Solutions
             </motion.h2>
 
-            {/* Get Started button with white thick borders */}
+            {/* Get Started button */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -456,12 +452,18 @@ const About = () => {
               transition={{ delay: 0.3 }}
               className="flex justify-center mb-16"
             >
-              <button className="bg-transparent border-4 border-white text-white font-bold py-4 px-12 rounded-full text-xl hover:bg-white hover:text-black transition-all duration-300">
-                Get Started
-              </button>
+              <a 
+                href="https://forms.office.com/r/r6LdLyPvCW" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <button className="bg-transparent border-4 border-white text-white font-bold py-4 px-12 rounded-full text-xl hover:bg-white hover:text-black transition-all duration-300">
+                  Get Started
+                </button>
+              </a>
             </motion.div>
 
-            {/* First row of floating divs - non-clickable, multiple colors, white text */}
+            {/* First row of floating divs */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -477,7 +479,7 @@ const About = () => {
               <div className="bg-indigo-600 text-white font-medium py-3 px-6 rounded-full shadow-md">Software Dev</div>
             </motion.div>
 
-            {/* Second row of floating divs - non-clickable, multiple colors, white text */}
+            {/* Second row of floating divs */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

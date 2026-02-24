@@ -15,9 +15,15 @@ const HeroSection = () => {
             We provide cutting-edge technology solutions to help businesses grow, innovate, and stay ahead of the competition.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-full px-8 py-6 text-base">
-              Get Started
-            </Button>
+            <a 
+              href="https://forms.office.com/r/r6LdLyPvCW" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-full px-8 py-6 text-base">
+                Get Started
+              </Button>
+            </a>
             <Button variant="outline" className="rounded-full px-8 py-6 text-base border-primary text-primary">
               Learn More
             </Button>

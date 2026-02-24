@@ -34,9 +34,16 @@ const RoadmapSection = () => {
             <p className="text-4xl md:text-5xl font-bold">2.3M+</p>
             <p className="text-sm opacity-70 mt-1">Projects Delivered Worldwide</p>
           </div>
-          <Button className="mt-6 md:mt-0 bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-full px-8 py-6 text-base">
+          <a 
+            href="https://forms.office.com/r/r6LdLyPvCW" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button className="mt-6 md:mt-0 bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-full px-8 py-6 text-base">
             Get Started
           </Button>
+            </a>
+          
         </div>
       </div>
     </section>

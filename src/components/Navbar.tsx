@@ -23,6 +23,13 @@ const Navbar = () => {
   const location = useLocation();
   const currentPath = location.pathname;
 
+  // Add this function to scroll to top
+  const handleNavigation = () => {
+    window.scrollTo(0, 0);
+    setOpen(false);
+    setMobileAboutOpen(false);
+  };
+
   // Check if a nav link is active
   const isActive = (path: string) => {
     return currentPath === path;
@@ -36,7 +43,7 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
       <div className="container flex items-center justify-between h-20 px-4 md:px-6">
-        <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
+        <Link to="/" className="flex items-center gap-2" onClick={handleNavigation}>
           <img 
             src={cloudLogo}
             alt="cloudSync" 
@@ -49,6 +56,7 @@ const Navbar = () => {
           {/* Home - First */}
           <Link
             to="/"
+            onClick={handleNavigation}
             className={`text-base font-medium transition-all duration-300 hover:-translate-y-0.5 ${
               isActive("/") 
                 ? 'text-[#4B6BFB]' 
@@ -78,6 +86,7 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.path}
+                  onClick={handleNavigation}
                   className={`block w-full text-left px-4 py-2 text-sm transition-colors duration-200 ${
                     currentPath === item.path 
                       ? 'text-[#4B6BFB] bg-blue-50' 
@@ -95,6 +104,7 @@ const Navbar = () => {
             <Link
               key={link.name}
               to={link.path}
+              onClick={handleNavigation}
               className={`text-base font-medium transition-all duration-300 hover:-translate-y-0.5 ${
                 isActive(link.path) 
                   ? 'text-[#4B6BFB]' 
@@ -106,14 +116,21 @@ const Navbar = () => {
           ))}
         </nav>
 
-        <Link to="/consult" className="hidden md:block">
+        {/* Desktop Consult Button - Updated to link to Microsoft Form */}
+        <a 
+          href="https://forms.office.com/r/r6LdLyPvCW" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="hidden md:block"
+          onClick={() => setOpen(false)}
+        >
           <Button className="bg-black text-white rounded-full px-8 py-6 text-base transition-all duration-500 hover:-translate-y-0.5 relative overflow-hidden group">
             <span className="relative z-10 transition-colors duration-500 group-hover:text-white">
               Consult
             </span>
             <div className="absolute inset-0 bg-[#4B6BFB] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </Button>
-        </Link>
+        </a>
 
         <button className="md:hidden" onClick={() => setOpen(!open)}>
           {open ? <X size={28} /> : <Menu size={28} />}
@@ -127,7 +144,7 @@ const Navbar = () => {
             {/* Home */}
             <Link
               to="/"
-              onClick={() => setOpen(false)}
+              onClick={handleNavigation}
               className={`block py-3 px-4 rounded-lg text-base font-medium transition-all duration-200 ${
                 isActive("/") 
                   ? 'text-[#4B6BFB] bg-blue-50' 
@@ -164,10 +181,7 @@ const Navbar = () => {
                     <Link
                       key={item.name}
                       to={item.path}
-                      onClick={() => {
-                        setOpen(false);
-                        setMobileAboutOpen(false);
-                      }}
+                      onClick={handleNavigation}
                       className={`block py-3 px-4 rounded-lg text-sm transition-all duration-200 ${
                         currentPath === item.path 
                           ? 'text-[#4B6BFB] bg-blue-50 font-medium' 
@@ -186,7 +200,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                onClick={() => setOpen(false)}
+                onClick={handleNavigation}
                 className={`block py-3 px-4 rounded-lg text-base font-medium transition-all duration-200 ${
                   isActive(link.path) 
                     ? 'text-[#4B6BFB] bg-blue-50' 
@@ -197,13 +211,18 @@ const Navbar = () => {
               </Link>
             ))}
             
-            {/* Consult button */}
+            {/* Mobile Consult button - Updated to link to Microsoft Form */}
             <div className="pt-4 mt-2 border-t border-gray-200">
-              <Link to="/consult" onClick={() => setOpen(false)}>
+              <a 
+                href="https://forms.office.com/r/r6LdLyPvCW" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+              >
                 <Button className="w-full bg-black text-white rounded-full py-6 text-base transition-all duration-500 hover:bg-[#4B6BFB]">
                   Consult
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

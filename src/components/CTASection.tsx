@@ -1,7 +1,13 @@
 import teamCollab from "@/assets/team-collab.png";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom"; // Add this import
 
 const CTASection = () => {
+  // Add this function to handle click
+  const handleContactClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <section className="py-20">
       <div className="container grid md:grid-cols-2 gap-12 items-center">
@@ -13,9 +19,11 @@ const CTASection = () => {
           <p className="text-muted-foreground">
             Streamline your workflows, automate repetitive tasks, and unlock new levels of productivity with our comprehensive IT platform. Built for businesses of all sizes.
           </p>
-          <Button className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-full px-8 py-6 text-base">
-            Contact Today!
-          </Button>
+          <Link to="/contact" onClick={handleContactClick}>
+            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-full px-8 py-6 text-base">
+              Contact Today!
+            </Button>
+          </Link>
         </div>
         <div className="rounded-3xl overflow-hidden">
           <img src={teamCollab} alt="Team collaboration" className="w-full h-auto object-cover rounded-3xl" />
