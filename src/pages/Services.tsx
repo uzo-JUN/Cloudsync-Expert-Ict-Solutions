@@ -24,15 +24,13 @@ import servingImg from "@/assets/serving.jpg";
 import TopBanner from "@/components/TopBanner";
 import { BarChart3,Workflow, Code2, BookOpen, Building2,  Shield, GraduationCap,Wallet,Truck, HeartPulse,ShoppingCart,HardHat,Sparkles, ArrowRight, Zap,Globe, Cloud, Database, Lock,Cpu,Gauge,Layers,Rocket,Star,Bot, Brain, LineChart,Users,Target,Trophy,Crown,X,CheckCircle,Clock,TrendingUp,Award
 } from "lucide-react";
-
-// Import the 7 view images (all using the same view.png - you can replace with different images later)
-import view1 from "@/assets/view.png";
-import view2 from "@/assets/view.png";
-import view3 from "@/assets/view.png";
-import view4 from "@/assets/view.png";
-import view5 from "@/assets/view.png";
-import view6 from "@/assets/view.png";
-import view7 from "@/assets/view.png";
+import view1 from "@/assets/marketresearch.png";
+import view2 from "@/assets/roadmap.png";
+import view3 from "@/assets/devteam.png";
+import view4 from "@/assets/productlaunch.png";
+import view5 from "@/assets/productmarket.png";
+import view6 from "@/assets/lifecyclemanagement.png";
+import view7 from "@/assets/productanalyis.png";
 
 const Services = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -117,7 +115,7 @@ const Services = () => {
     {
       icon: icon2,
       lucideIcon: Workflow,
-      title: "Project Automations",
+      title: "Project Automation",
       description: "Streamline your workflows with custom automation solutions. We integrate with popular tools like Zapier, Make, and custom API connections.",
       shortDetail: "Our automation experts analyze your current workflows and design custom solutions that integrate seamlessly with your existing tools. We create efficient, error-free processes that save time, reduce operational costs, and let your team focus on high-value tasks.",
       color: "from-green-500 to-emerald-500",
@@ -173,6 +171,47 @@ const Services = () => {
 
   // Array of 7 view images
   const viewImages = [view1, view2, view3, view4, view5, view6, view7];
+
+//edit image texts
+  const imageTexts = [
+    <h1 style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}>Conducting Market Research : <h4>Our skilled product managers will have their fingers on the pulse 
+of the market. They will know what trends are happening in the 
+industry and what customers are looking for. Market research 
+shall be the key responsibility of Cadright IT to identify 
+opportunities and assess customer needs continually.</h4></h1> ,
+
+    <h1 style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}>Creating Product Roadmaps :<h4>A product roadmap is a high-level view of the planned 
+development of a product. It includes everything about product 
+planning and outlines the features that will be added to a product 
+as and when required. Cadright IT shall be responsible for creating 
+and maintaining the product roadmap throughout the product 
+lifecycle</h4></h1> ,
+
+    <h1 style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}>Working with Development Teams :<h4>We work closely with development teams to ensure that the 
+product is being developed according to the roadmap. The 
+product manager is also responsible for communicating changes 
+or new features to the development team.</h4></h1> ,
+
+    <h1 style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}>Preparing Product Launches :<h4>cloudsync shall be responsible for the successful launch of 
+subsequent versions of the product. This includes planning the 
+launch, coordinating with marketing and sales, and ensuring that 
+the product is ready for release on due dates</h4></h1> ,
+
+    <h1 style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}>Creating Product Marketing : <h4>Creating and executing product marketing plans is one of the 
+crucial tasks to be handled by Cadright IT. This service includes 
+activities such as market research, competitive analysis, 
+messaging, and positioning, sponsored ads, google ads, seo etc</h4></h1> ,
+
+    <h1 style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}>Product Lifecycle Management :<h4>Cadright IT shall be responsible for managing the product lifecycle 
+from idea to execution and management. This includes defining 
+the strategy for how the product will be developed and launched, 
+as well as managing its ongoing evolution</h4></h1> ,
+
+    <h1 style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}>Conducting Product Analysis :<h4>Cloudsync is responsible for conducting regular analysis of the 
+product. This includes tracking metrics, evaluating customer 
+feedback and assessing the competitive landscape.</h4></h1> ,
+    
+  ];
 
   // Industries data
   const industries = [
@@ -572,14 +611,12 @@ const Services = () => {
                               alt={`Project ${index + 1}`}
                               className="w-full h-full object-cover"
                             />
-        
                           </div>
                           
-                          {/* Text on the right */}
+                          {/* Text on the right - using the default text array */}
                           <div className="flex-1">
-                            
                             <p className="text-sm text-gray-700 leading-relaxed break-words" style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}>
-                              eduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuggggggggggggg
+                              {imageTexts[index]}
                             </p>
                             
                             {/* Decorative dots */}
