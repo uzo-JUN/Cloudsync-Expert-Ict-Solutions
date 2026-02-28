@@ -1,5 +1,6 @@
 import { ArrowUp, Facebook, Twitter, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
+import cloudLogo from "@/assets/cloudlogo.png"; // Import the cloud logo
 
 const Footer = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -35,7 +36,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center text-secondary-foreground font-bold text-sm">C</div>
+              <div className="w-8 h-8 flex items-center justify-center overflow-hidden">
+                <img 
+                  src={cloudLogo} 
+                  alt="CloudSync Logo" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <span className="font-serif text-xl font-bold">CloudSync</span>
             </div>
             <p className="text-sm opacity-70 leading-relaxed">
@@ -80,37 +87,27 @@ const Footer = () => {
 
           <div>
             <h4 className="font-bold mb-4 font-sans">Contact</h4>
-            <div className="space-y-4 text-sm opacity-70">
-              {/* Nigeria Office */}
+            <div className="space-y-6 text-sm opacity-70">
+              {/* USA Office - Now First */}
               <div>
-                <p className="font-semibold text-secondary mb-1">Nigeria Office</p>
-                <p>Suite 1G, East-wing, Groundfloor,</p>
-                <p>Purity Business Mall, Abakaliki Road,</p>
-                <p>Enugu, Nigeria. 400211</p>
-              </div>
-
-              {/* USA Office */}
-              <div>
-                <p className="font-semibold text-secondary mb-1">USA Office</p>
+                <p className="font-semibold text-secondary mb-2">USA Office</p>
                 <p>15500 Voss Rd, Ste 425,</p>
-                <p>Sugar Land, TX 77498</p>
-              </div>
-
-              {/* Nigeria Phone */}
-              <div>
-                <p className="font-semibold text-secondary mb-1">Nigeria</p>
-                <p>+234 814 168 1189</p>
-              </div>
-
-              {/* USA Phone */}
-              <div>
-                <p className="font-semibold text-secondary mb-1">USA</p>
+                <p>Sugar Land, TX 77498</p> <br />
                 <p>+1 (214) 462-2824</p>
               </div>
 
-              {/* Email */}
+              {/* African Office - Now Second */}
               <div>
-                <p className="font-semibold text-secondary mb-1">Email</p>
+                <p className="font-semibold text-secondary mb-2">Africa and Middle East Office</p>
+                <p>Suite 1G, East-wing, Groundfloor,</p>
+                <p>Purity Business Mall, Abakaliki Road,</p>
+                <p>Enugu. 400211</p> <br />
+                <p>+234 814 168 1189</p>
+              </div>
+
+              {/* Email - Separate section at the bottom */}
+              <div className="pt-2">
+                <p className="font-semibold text-secondary mb-2">Email</p>
                 <p>info@cloudsyncc.com</p>
                 <p>support@cloudsyncc.com</p>
               </div>

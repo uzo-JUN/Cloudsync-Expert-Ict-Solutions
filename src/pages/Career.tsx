@@ -54,12 +54,18 @@ const Career = () => {
             transition={{ duration: 0.8 }}
           >
             {/* "WORK WITH US" - Big Bold White Letters */}
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white mb-8 tracking-tight">
+            <h1 
+              className="text-6xl md:text-8xl lg:text-9xl font-black text-white mb-8 tracking-tight"
+              style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+            >
               WORK WITH US
             </h1>
             
             {/* Description Text - White */}
-            <p className="text-lg md:text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
+            <p 
+              className="text-lg md:text-xl text-white/90 max-w-4xl mx-auto leading-relaxed"
+              style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+            >
               At CloudSync, our strength lies in our people, a diverse team of innovators, engineers, and problem-solvers
               dedicated to building smarter, scalable tech solutions. Get to know the experts driving our vision forward
             </p>
@@ -78,12 +84,18 @@ const Career = () => {
               viewport={{ once: true }}
             >
               {/* "DISCUSS CAREER" - Big Bold Black Letters */}
-              <h2 className="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">
+              <h2 
+                className="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight"
+                style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+              >
                 DISCUSS <br />CAREER
               </h2>
               
               {/* Description Text */}
-              <p className="text-xl text-gray-700 mb-4">
+              <p 
+                className="text-xl text-gray-700 mb-4"
+                style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+              >
                 We are hiring domain experts across the globe. Join our team!
               </p>
             </motion.div>
@@ -95,12 +107,22 @@ const Career = () => {
               viewport={{ once: true }}
               className="bg-white p-8 rounded-2xl shadow-xl"
             >
-              <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
+              <h3 
+                className="text-2xl font-bold mb-6"
+                style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+              >
+                Let's Connect
+              </h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name */}
                 <div>
-                  <label className="block text-sm font-medium mb-2">Name *</label>
+                  <label 
+                    className="block text-sm font-medium mb-2"
+                    style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                  >
+                    Name *
+                  </label>
                   <input
                     type="text"
                     name="name"
@@ -109,12 +131,18 @@ const Career = () => {
                     required
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                     placeholder="Your full name"
+                    style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
                   />
                 </div>
 
                 {/* Email */}
                 <div>
-                  <label className="block text-sm font-medium mb-2">E-mail *</label>
+                  <label 
+                    className="block text-sm font-medium mb-2"
+                    style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                  >
+                    E-mail *
+                  </label>
                   <input
                     type="email"
                     name="email"
@@ -123,12 +151,18 @@ const Career = () => {
                     required
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                     placeholder="your.email@example.com"
+                    style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
                   />
                 </div>
 
                 {/* What can we do together? */}
                 <div>
-                  <label className="block text-sm font-medium mb-2">What can we do together? *</label>
+                  <label 
+                    className="block text-sm font-medium mb-2"
+                    style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                  >
+                    What can we do together? *
+                  </label>
                   <textarea
                     name="message"
                     value={formData.message}
@@ -137,6 +171,7 @@ const Career = () => {
                     required
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
                     placeholder="Tell us about your ideas, how you'd like to contribute ? "
+                    style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
                   />
                 </div>
 
@@ -146,6 +181,7 @@ const Career = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="w-full px-8 py-4 bg-primary text-white rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl"
+                  style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
                 >
                   Submit Application
                   <Send className="w-5 h-5" />
@@ -153,8 +189,7 @@ const Career = () => {
               </form>
 
               {/* Note about privacy */}
-              <p className="text-xs text-gray-500 mt-4 text-center">
-              </p>
+              <p className="text-xs text-gray-500 mt-4 text-center"></p>
             </motion.div>
           </div>
         </div>

@@ -33,12 +33,18 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
           >
             {/* "GET IN TOUCH" - Big Bold Text */}
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight text-white mb-6">
+            <h1 
+              className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight text-white mb-6"
+              style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+            >
               GET IN TOUCH
             </h1>
             
             {/* Optional subtitle */}
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            <p 
+              className="text-xl text-white/90 max-w-2xl mx-auto"
+              style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+            >
               We'd love to hear from you. Send us a message and we'll respond as soon as possible.
             </p>
           </motion.div>
@@ -60,18 +66,23 @@ const Contact = () => {
               <div className="inline-flex p-4 bg-blue-500/20 dark:bg-blue-500/30 rounded-full mb-6">
                 <MapPin className="w-8 h-8 text-blue-600 dark:text-blue-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-200">Visit Us</h3>
-              <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-3">
-                <div>
-                  <p className="font-semibold text-sm text-blue-600 dark:text-blue-400 mb-1">NIGERIA</p>
-                  <p>Suite 1G, East-wing, Groundfloor,</p>
-                  <p>Purity Business Mall, Abakaliki Road,</p>
-                  <p>Enugu, Nigeria. 400211</p>
-                </div>
-                <div className="border-t border-blue-200 dark:border-blue-800/50 pt-3">
-                  <p className="font-semibold text-sm text-blue-600 dark:text-blue-400 mb-1">USA</p>
+              <h3 
+                className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-200"
+                style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+              >
+                Visit Us
+              </h3>
+              <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-3" style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}>                
+                <div className="border-t text-xl border-blue-200 dark:border-blue-800/50 pt-3">
+                  <p className="font-semibold text-sm text-xl text-blue-600 dark:text-blue-400 mb-1">USA</p>
                   <p>15500 Voss Rd, Ste 425,</p>
                   <p>Sugar Land, TX 77498</p>
+                </div>
+                <div className="text-xl">
+                  <p className="font-semibold text-xl text-sm text-blue-600 dark:text-blue-400 mb-1">Africa and Middle East</p>
+                  <p>Suite 1G, East-wing, Groundfloor,</p>
+                  <p>Purity Business Mall, Abakaliki Road,</p>
+                  <p>Enugu. 400211</p>
                 </div>
               </div>
             </div>
@@ -81,15 +92,20 @@ const Contact = () => {
               <div className="inline-flex p-4 bg-green-500/20 dark:bg-green-500/30 rounded-full mb-6">
                 <Phone className="w-8 h-8 text-green-600 dark:text-green-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-200">Call Us</h3>
-              <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-3">
-                <div>
-                  <p className="font-semibold text-sm text-green-600 dark:text-green-400 mb-1">NIGERIA</p>
-                  <p className="text-lg font-medium">+234 814 168 1189</p>
-                </div>
+              <h3 
+                className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-200"
+                style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+              >
+                Call Us
+              </h3>
+              <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-3" style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}>
                 <div className="border-t border-green-200 dark:border-green-800/50 pt-3">
-                  <p className="font-semibold text-sm text-green-600 dark:text-green-400 mb-1">USA</p>
+                  <p className="font-semibold text-sm text-xl text-green-600 dark:text-green-400 mb-1">USA</p>
                   <p className="text-lg font-medium">+1 (214) 462-2824</p>
+                </div>
+               <div>
+                  <p className="font-semibold text-sm text-xl text-green-600 dark:text-green-400 mb-1">Africa and Middle East</p>
+                  <p className="text-lg font-medium">+234 814 168 1189</p>
                 </div>
               </div>
             </div>
@@ -99,15 +115,20 @@ const Contact = () => {
               <div className="inline-flex p-4 bg-purple-500/20 dark:bg-purple-500/30 rounded-full mb-6">
                 <Mail className="w-8 h-8 text-purple-600 dark:text-purple-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-200">Email Us</h3>
-              <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-3">
+              <h3 
+                className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-200"
+                style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+              >
+                Email Us
+              </h3>
+              <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-3" style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}>
                 <div>
-                  <p className="font-semibold text-sm text-purple-600 dark:text-purple-400 mb-1">GENERAL INQUIRIES</p>
-                  <p className="text-base">support@cloudsyncc.com</p>
+                  <p className="font-semibold text-xl text-sm text-purple-600 dark:text-purple-400 mb-1">GENERAL INQUIRIES</p>
+                  <p className="text-base text-lg">support@cloudsyncc.com</p>
                 </div>
                 <div className="border-t border-purple-200 dark:border-purple-800/50 pt-3">
-                  <p className="font-semibold text-sm text-purple-600 dark:text-purple-400 mb-1">SUPPORT</p>
-                  <p className="text-base">info@cloudsyncc.com</p>
+                  <p className="font-semibold text-xl text-sm text-purple-600 dark:text-purple-400 mb-1">SUPPORT</p>
+                  <p className="text-base text-lg">info@cloudsyncc.com</p>
                 </div>
               </div>
             </div>
@@ -126,7 +147,12 @@ const Contact = () => {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              <h2 className="text-3xl font-bold mb-8">Contact Information</h2>
+              <h2 
+                className="text-3xl font-bold mb-8"
+                style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+              >
+                Contact Information
+              </h2>
               
               {/* Office Address */}
               <div className="flex items-start gap-4 p-6 glass-card rounded-xl">
@@ -134,18 +160,25 @@ const Contact = () => {
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-2">Office Address</h3>
-                  <div className="space-y-3 text-muted-foreground">
-                    <div>
-                      <p className="font-medium text-primary">Nigeria Office</p>
-                      <p>Suite 1G, East-wing, Groundfloor,</p>
-                      <p>Purity Business Mall, Abakaliki Road,</p>
-                      <p>Enugu, Nigeria. 400211</p>
-                    </div>
+                  <h3 
+                    className="font-semibold text-lg mb-2"
+                    style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                  >
+                    Office Address
+                  </h3>
+                  <div className="space-y-3 text-muted-foreground" style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}>
                     <div>
                       <p className="font-medium text-primary">USA Office</p>
                       <p>15500 Voss Rd, Ste 425,</p>
                       <p>Sugar Land, TX 77498</p>
+                      <p>+1 (214) 462-2824</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-primary">Africa and Middle East Office</p>
+                      <p>Suite 1G, East-wing, Groundfloor,</p>
+                      <p>Purity Business Mall, Abakaliki Road,</p>
+                      <p>Enugu. 400211</p>
+                      <p>+234 814 168 1189</p>
                     </div>
                   </div>
                 </div>
@@ -157,8 +190,13 @@ const Contact = () => {
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-2">Email Us</h3>
-                  <div className="space-y-2 text-muted-foreground">
+                  <h3 
+                    className="font-semibold text-lg mb-2"
+                    style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                  >
+                    Email Us
+                  </h3>
+                  <div className="space-y-2 text-muted-foreground" style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}>
                     <div>
                       <p className="font-medium text-primary">General Inquiries</p>
                       <p>info@cloudsyncc.com</p>
@@ -166,26 +204,6 @@ const Contact = () => {
                     <div>
                       <p className="font-medium text-primary">Support</p>
                       <p>support@cloudsyncc.com</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Phone */}
-              <div className="flex items-start gap-4 p-6 glass-card rounded-xl">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <Phone className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Phone</h3>
-                  <div className="space-y-2 text-muted-foreground">
-                    <div>
-                      <p className="font-medium text-primary">Nigeria</p>
-                      <p>+234 814 168 1189</p>
-                    </div>
-                    <div>
-                      <p className="font-medium text-primary">USA</p>
-                      <p>+1 (214) 462-2824</p>
                     </div>
                   </div>
                 </div>
@@ -199,52 +217,87 @@ const Contact = () => {
               viewport={{ once: true }}
               className="glass-card p-8 rounded-2xl"
             >
-              <h2 className="text-3xl font-bold mb-6">Send us a Message</h2>
+              <h2 
+                className="text-3xl font-bold mb-6"
+                style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+              >
+                Send us a Message
+              </h2>
               
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium mb-2">First Name</label>
+                    <label 
+                      className="block text-sm font-medium mb-2"
+                      style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                    >
+                      First Name
+                    </label>
                     <input 
                       type="text" 
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
                       placeholder="Emma"
+                      style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Last Name</label>
+                    <label 
+                      className="block text-sm font-medium mb-2"
+                      style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                    >
+                      Last Name
+                    </label>
                     <input 
                       type="text" 
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
                       placeholder="Gregory"
+                      style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <label 
+                    className="block text-sm font-medium mb-2"
+                    style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                  >
+                    Email
+                  </label>
                   <input 
                     type="email" 
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
-                    placeholder="cloudsync@example.com"
+                    placeholder="cloudsyncc@example.com"
+                    style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Subject</label>
+                  <label 
+                    className="block text-sm font-medium mb-2"
+                    style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                  >
+                    Subject
+                  </label>
                   <input 
                     type="text" 
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="How can we help?"
+                    style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Message</label>
+                  <label 
+                    className="block text-sm font-medium mb-2"
+                    style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                  >
+                    Message
+                  </label>
                   <textarea 
                     rows={5}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                     placeholder="Talk to us..."
+                    style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
                   />
                 </div>
 
@@ -252,6 +305,7 @@ const Contact = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="w-full px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-primary/90 transition"
+                  style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
                 >
                   Send Message
                   <Send className="w-5 h-5" />

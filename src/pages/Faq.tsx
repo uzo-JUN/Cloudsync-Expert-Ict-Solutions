@@ -96,12 +96,18 @@ const FAQ = () => {
             transition={{ duration: 0.8 }}
           >
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 
+              className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+              style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+            >
               Hello, what can we<br />help you find?
             </h1>
             
             {/* Description Text */}
-            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+            <p 
+              className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed"
+              style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+            >
               At Cloudsync, we understand that clarity is key. Our FAQ section answers common questions 
               about our services, processes, timelines, support, and more—helping you make informed 
               decisions with confidence.
@@ -123,7 +129,10 @@ const FAQ = () => {
       {searchTerm.trim() !== "" && (
         <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold mb-6">
+            <h2 
+              className="text-2xl font-bold mb-6"
+              style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+            >
               Search Results {filteredQuestions.length > 0 ? `(${filteredQuestions.length})` : ""}
             </h2>
             
@@ -137,19 +146,29 @@ const FAQ = () => {
                     className="bg-white rounded-xl shadow-md overflow-hidden"
                   >
                     <div className="p-6">
-                      <p className="text-sm text-primary font-semibold mb-2">{item.category}</p>
-                      <h3 className="text-lg font-bold mb-3">{item.q}</h3>
+                      <p 
+                        className="text-sm text-primary font-semibold mb-2"
+                        style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                      >
+                        {item.category}
+                      </p>
+                      <h3 
+                        className="text-lg font-bold mb-3"
+                        style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                      >
+                        {item.q}
+                      </h3>
                       {item.list ? (
-                        <div className="text-gray-600">
+                        <div className="text-gray-600" style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}>
                           <p>{item.a}</p>
                           <ul className="list-disc pl-5 mt-2 space-y-1">
                             {item.list.map((listItem, i) => (
-                              <li key={i}>{listItem}</li>
+                              <li key={i} style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}>{listItem}</li>
                             ))}
                           </ul>
                         </div>
                       ) : (
-                        <p className="text-gray-600">{item.a}</p>
+                        <p className="text-gray-600" style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}>{item.a}</p>
                       )}
                     </div>
                   </motion.div>
@@ -158,8 +177,18 @@ const FAQ = () => {
             ) : (
               <div className="text-center py-12 bg-white rounded-xl">
                 <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                <p className="text-xl text-gray-600">No results found for "{searchTerm}"</p>
-                <p className="text-gray-500 mt-2">Try different keywords or browse the questions below</p>
+                <p 
+                  className="text-xl text-gray-600"
+                  style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                >
+                  No results found for "{searchTerm}"
+                </p>
+                <p 
+                  className="text-gray-500 mt-2"
+                  style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                >
+                  Try different keywords or browse the questions below
+                </p>
               </div>
             )}
           </div>
@@ -175,10 +204,16 @@ const FAQ = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 
+              className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+              style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+            >
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p 
+              className="text-lg text-gray-600 max-w-3xl mx-auto"
+              style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+            >
               Find answers to common questions about our services, process, and partnership.
             </p>
           </motion.div>
@@ -202,7 +237,12 @@ const FAQ = () => {
                           onClick={() => toggleItem(globalIndex)}
                           className="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                         >
-                          <span className="font-semibold text-gray-900 text-lg pr-4">{item.q}</span>
+                          <span 
+                            className="font-semibold text-gray-900 text-lg pr-4"
+                            style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                          >
+                            {item.q}
+                          </span>
                           <ChevronDown 
                             className={`w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300 ${
                               openItems[globalIndex] ? "rotate-180" : ""
@@ -217,11 +257,22 @@ const FAQ = () => {
                             exit={{ opacity: 0, height: 0 }}
                             className="px-6 pb-5 text-gray-600 border-t border-gray-100"
                           >
-                            <p className="mt-3">{item.a}</p>
+                            <p 
+                              className="mt-3"
+                              style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                            >
+                              {item.a}
+                            </p>
                             {item.list && (
                               <ul className="list-disc pl-5 mt-3 space-y-2">
                                 {item.list.map((listItem, i) => (
-                                  <li key={i} className="text-gray-600">{listItem}</li>
+                                  <li 
+                                    key={i} 
+                                    className="text-gray-600"
+                                    style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                                  >
+                                    {listItem}
+                                  </li>
                                 ))}
                               </ul>
                             )}
@@ -246,10 +297,16 @@ const FAQ = () => {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 
+              className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+              style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+            >
               Still Have Questions?
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <p 
+              className="text-xl text-gray-600 mb-8"
+              style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+            >
               Have questions? We've got answers. Our team is here to help you with any additional questions you may have about our services, process, or how we can work together.
             </p>
             
@@ -259,6 +316,7 @@ const FAQ = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-black text-white font-semibold py-4 px-10 rounded-full text-lg hover:bg-primary transition-all duration-300 shadow-lg hover:shadow-xl"
+                style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
               >
                 Contact Us
               </motion.button>
@@ -272,4 +330,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default FAQ;   

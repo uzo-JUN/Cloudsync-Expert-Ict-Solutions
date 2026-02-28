@@ -12,7 +12,12 @@ const CircularProgress = ({ value }: { value: number }) => {
           strokeDasharray={circumference} strokeDashoffset={strokeDashoffset} strokeLinecap="round" className="transition-all duration-1000" />
       </svg>
       <div className="absolute inset-0 flex items-center justify-center">
-        <span className="text-2xl font-bold text-primary">{value}%</span>
+        <span 
+          className="text-2xl font-bold text-primary"
+          style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+        >
+          {value}%
+        </span>
       </div>
     </div>
   );
@@ -27,12 +32,32 @@ const AboutSection = () => {
           <div className="space-y-8">
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-secondary text-secondary-foreground rounded-2xl p-6 text-center">
-                <p className="text-3xl font-bold">88%</p>
-                <p className="text-sm mt-1 opacity-80">Revenue Growth</p>
+                <p 
+                  className="text-3xl font-bold"
+                  style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                >
+                  88%
+                </p>
+                <p 
+                  className="text-sm mt-1 opacity-80"
+                  style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                >
+                  Revenue Growth
+                </p>
               </div>
               <div className="bg-primary text-primary-foreground rounded-2xl p-6 text-center">
-                <p className="text-3xl font-bold">99.9%</p>
-                <p className="text-sm mt-1 opacity-80">Client Satisfaction</p>
+                <p 
+                  className="text-3xl font-bold"
+                  style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                >
+                  99.9%
+                </p>
+                <p 
+                  className="text-sm mt-1 opacity-80"
+                  style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                >
+                  Client Satisfaction
+                </p>
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden">
@@ -42,8 +67,16 @@ const AboutSection = () => {
 
           {/* Right */}
           <div className="space-y-6">
-            <p className="text-secondary font-semibold text-sm uppercase tracking-wider">About Us</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+            <p 
+              className="text-secondary font-semibold text-sm uppercase tracking-wider"
+              style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+            >
+              About Us
+            </p>
+            <h2 
+              className="text-3xl md:text-4xl font-bold text-primary leading-tight"
+              style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+            >
               Comprehensive IT Solution Growth & Efficiency
             </h2>
 
@@ -51,7 +84,13 @@ const AboutSection = () => {
               <CircularProgress value={78} />
               <div className="flex flex-wrap gap-2 pt-2">
                 {["Cybersecurity", "Infrastructure Management", "Operational Excellence"].map((tag) => (
-                  <span key={tag} className="bg-secondary/10 text-secondary text-xs font-medium px-3 py-1.5 rounded-full">{tag}</span>
+                  <span 
+                    key={tag} 
+                    className="bg-secondary/10 text-secondary text-xs font-medium px-3 py-1.5 rounded-full"
+                    style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                  >
+                    {tag}
+                  </span>
                 ))}
               </div>
             </div>
@@ -67,8 +106,18 @@ const AboutSection = () => {
                     <Icon size={20} className="text-secondary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary text-sm font-sans">{title}</h4>
-                    <p className="text-muted-foreground text-sm">{desc}</p>
+                    <h4 
+                      className="font-semibold text-primary text-sm"
+                      style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                    >
+                      {title}
+                    </h4>
+                    <p 
+                      className="text-muted-foreground text-sm"
+                      style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                    >
+                      {desc}
+                    </p>
                   </div>
                 </div>
               ))}
