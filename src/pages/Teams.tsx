@@ -3,10 +3,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useState, useEffect } from "react";
 import { Sparkles, ArrowRight } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom"; // Add useNavigate
 
 const Team = () => {
   const [scrolled, setScrolled] = useState(false);
   const [hoveredMember, setHoveredMember] = useState<number | null>(null);
+  const navigate = useNavigate(); // Add useNavigate hook
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +17,12 @@ const Team = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Function to handle navigation
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
 
   // Team members data with names, positions, bios, and image paths
   const teamMembers = [
@@ -341,23 +349,24 @@ const Team = () => {
             ))}
           </div>
 
-          {/* Join the team CTA */}
+          {/* Join the team CTA - Fixed with Link component */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mt-16"
           >
-            <motion.button
-              className="bg-gradient-to-r from-primary to-secondary text-white px-10 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-3 group"
-              style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => window.location.href = "/career"}
-            >
-              <span>Join Our Team</span>
-              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-            </motion.button>
+            <Link to="/career" onClick={() => window.scrollTo(0, 0)}>
+              <motion.button
+                className="bg-gradient-to-r from-primary to-secondary text-white px-10 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-3 group"
+                style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span>Join Our Team</span>
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -367,4 +376,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default Team; 
