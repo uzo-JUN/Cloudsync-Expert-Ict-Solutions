@@ -2,8 +2,14 @@ import heroImg from "@/assets/hero-vr.png";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Star, Sparkles, Zap, Rocket, ArrowRight, Award, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom"; // Add this import
 
 const HeroSection = () => {
+  // Add this function to handle navigation to top
+  const handleNavigation = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <section id="home" className="py-16 md:py-24 relative overflow-hidden">
       {/* Animated background elements */}
@@ -195,21 +201,23 @@ const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button 
-                variant="outline" 
-                className="rounded-full px-8 py-6 text-base border-primary text-primary hover:bg-primary/5 transition-all duration-300 group"
-                style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
-              >
-                <span className="flex items-center gap-2">
-                  Learn More
-                  <motion.span
-                    animate={{ rotate: [0, 360] }}
-                    transition={{ duration: 3, repeat: Infinity }}
-                  >
-                    <Sparkles size={16} className="text-primary" />
-                  </motion.span>
-                </span>
-              </Button>
+              <Link to="/aboutus" onClick={handleNavigation}>
+                <Button 
+                  variant="outline" 
+                  className="rounded-full px-8 py-6 text-base border-primary text-primary hover:bg-primary/5 transition-all duration-300 group"
+                  style={{ fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }}
+                >
+                  <span className="flex items-center gap-2">
+                    Learn More
+                    <motion.span
+                      animate={{ rotate: [0, 360] }}
+                      transition={{ duration: 3, repeat: Infinity }}
+                    >
+                      <Sparkles size={16} className="text-primary" />
+                    </motion.span>
+                  </span>
+                </Button>
+              </Link>
             </motion.div>
           </motion.div>
           
